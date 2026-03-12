@@ -3,6 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
+      - cd aws-cicd-flask-demo 
       - pip install -r requirements.txt
 
   build:
