@@ -10,6 +10,7 @@ phases:
     commands:
       #Update build step to use `python -m py_compile` for syntax checking instead of starting the Flask server during CI
       - python -m py_compile app.py
+      - echo "Build Completed Successfully"
 
 artifacts:
   files:
