@@ -12,6 +12,8 @@ cd /home/ubuntu/aws-cicd-flask-demo
 # Change directory to the application folder.
 # Our Flask application (app.py) and requirements.txt are located here.
 
+echo "Activate Virtual env..."
+source uenv/bin/activate
 # Start the Flask application using Gunicorn.
 # Gunicorn is a production-ready Python web server for running Flask apps.
 
