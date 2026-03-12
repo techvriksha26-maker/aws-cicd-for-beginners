@@ -1,11 +1,17 @@
 #!/bin/bash
 set -e
 
-echo "Validating application on port 8000..."
+echo "Validating Flask service..."
 
-if curl -f http://localhost:8000/ ; then
-    echo "SUCCESS: Application is running correctly."
-else
-    echo "ERROR: Application validation failed. Server not responding."
-    exit 1
-fi
+for i in {1..10}; do
+    if curl -f http://127.0.0.1:8000/; then
+        echo ""
+        echo "Validation successful."
+        exit 0
+    fi
+    echo "Attempt $i failed, waiting 3 seconds..."
+    sleep 3
+done
+
+echo "Validation failed after multiple attempts."
+exit 1
