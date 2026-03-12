@@ -3,6 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
+      - echo " Test Pipeline trigger"
       - cd aws-cicd-flask-demo 
       - pip install -r requirements.txt
 
@@ -11,6 +12,7 @@ phases:
       #Update build step to use `python -m py_compile` for syntax checking instead of starting the Flask server during CI
       - python -m py_compile app.py
       - echo "Build Completed Successfully"
+        
 
 artifacts:
   files:
