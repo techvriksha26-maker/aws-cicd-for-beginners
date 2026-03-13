@@ -5,7 +5,7 @@ APP_DIR="/home/ubuntu/aws-cicd-flask-demo"
 SCRIPTS_DIR="$APP_DIR/scripts"
 
 echo "======================================"
-echo " Starting Installation.."
+echo " Starting Installation..."
 echo "======================================"
 
 cd $APP_DIR
